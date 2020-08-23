@@ -1,0 +1,17 @@
+﻿@model IEnumerable<EfCurso.Models.Funcionario>
+
+
+<h2>Lista de Funcionários</h2>
+
+<a href="/Funcionarios/Cadastrar" class="btn btn-success">Novo Funcionário</a>
+<hr />
+@foreach (var funcionario in Model)
+{
+    <p>Nome : @funcionario.Nome</p>
+    <p>CPF: @funcionario.Cpf</p>
+    <p>Salário: @funcionario.Salario</p>
+    <a href="/Funcionarios/Editar/@funcionario.Id" class="btn btn-primary">Editar</a>
+    <a href="/Funcionarios/Deletar/@funcionario.Id" class="btn btn-danger">Deletar</a>
+    <hr />
+}
+
